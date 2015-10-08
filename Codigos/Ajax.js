@@ -1,5 +1,8 @@
 
 
+//--------------
+// Ajax Normal
+//-------------
 
 function Ajax(tipo, url){
 	
@@ -28,6 +31,13 @@ Ajax.get('google.com','bing.com')
 
 
 
+
+
+
+//--------------
+// Ajax com Callback
+//-------------
+
 function AjaxWithCallback(url,successCallback,errorCallback){
    
    var isValid = url.indexOf('https://')>=0;    
@@ -55,6 +65,9 @@ AjaxWithCallback("ftp://www.com.br"  ,successAlert,error);
 
 
 
+//--------------
+// Ajax Normal
+//-------------
 
 var Promise = Promise || function(){}
 function AjaxWithPromise(url){
