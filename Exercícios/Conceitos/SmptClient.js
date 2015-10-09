@@ -2,11 +2,17 @@ console.clear();
 
 /*
 Implemente a classe SmtpClient e o método Send
+
 	-Este método recebe um objeto com as seguintes propriedades: [to], [from], [body], [subject].
+	
 	-Dentro do método, verifique a validade de cada uma dessas propriedades e retorne [true] ou [false]
+	
 	-Caso [to] ou [from] forem vazios ou e-mails inválidos, retorne [false] (“string”.indexOf(‘@’)>=0)
+	
 	-Se [body] e [subject] forem vazias, devem ser substituídas por “No Body” e “No Subject” respectivamente
+	
 	-Passe também um callback para logar a mensagem;
+	
 	-Se tudo estiver preenchido, invoque o callback passando a mensagem;
 
 */
