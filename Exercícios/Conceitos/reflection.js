@@ -1,5 +1,19 @@
 console.clear();
 
+/*
+Utilizando for(var prop in obj){}
+Faça uma function que receba um objeto e logue para cada uma das propriedades dele:
+	-Nome da propriedade
+	-Valor
+	-Tipo do valor
+	-Valor como String
+	-Valor como Numero
+	-Valor como Boleano
+
+	Se uma das propriedades for objeto, as propriedades deste devem ser logadas também
+*/
+
+
 var objeto = {
   
 nome:'dfs',
