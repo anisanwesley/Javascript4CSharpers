@@ -9,10 +9,24 @@ console.clear();
   String.prototype.toBinary=function(){
     return +this.toString(2);    
   };
+  
   Number.prototype.toBinary=function(){
     return this.toString(2);    
   };
   
+  String.prototype.toDecimal=function(){
+  
+  var res = 0;
+  for(var b in this){
+    var bit = +this[b];
+    if(!isNaN(bit)){
+       res = (res * 2) + bit;
+      
+    }
+  }
+  return res;
+  
+};
       
 } )();
 
@@ -41,8 +55,21 @@ console.clear();
   
   function CalculadoraBinaria(){
     var self = this;
-    self.bin = function(x,y){
-      return self.add(x,y).toBinary();
+    self.addBin = function(x,y){
+       
+    
+    var n1 = x.toDecimal("Passando n1:");
+    var n2 = y.toDecimal("Passando n2:");
+   
+    console.log(n1);
+    console.log(n2);
+    
+    var soma = (n1+n2);
+    console.log(soma)
+    
+    return soma.toString(2); 
+	
+	
     };
   }
   CalculadoraBinaria.prototype=new Calculadora('Binária');
@@ -89,7 +116,7 @@ $('button[name=mod]').click(function(){
   $r.text(calc.mod(+$x.val(),+$y.val()));
 });
 $('button[name=bin]').click(function(){  
-  $r.text(calc.bin(+$x.val(),+$y.val()));
+  $r.text(calc.addBin($x.val(),$y.val()));
 });
   
   
